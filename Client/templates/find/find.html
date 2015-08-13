@@ -1,0 +1,11 @@
+<template name="find">
+  {{#contentFor "headerTitle"}}
+    <h1 class="title">Look for latest binshi's</h1>
+  {{/contentFor}}
+    {{#ionContent class="padding"}}
+		<h1>Load up the binshis</h1>
+		  <div class="map-container">
+			{{> googleMap name="exampleMap" options=exampleMapOptions}}
+		  </div>
+    {{/ionContent}}
+</template>

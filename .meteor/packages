@@ -10,3 +10,7 @@ insecure
 iron:router
 dburles:google-maps
 mdg:geolocation
+meteoric:ionic-sass
+meteoric:ionicons-sass
+meteoric:ionic
+meteoric:autoform-ionic
