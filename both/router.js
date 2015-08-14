@@ -22,11 +22,11 @@ Router.map( function () {
 Router.onBeforeAction(function() {
   GoogleMaps.load();
   this.next();
-  console.log('test');
 }, { only: ['report', 'find'] });
 
 Router.map(function() {
   this.route('index', {path: '/'});
   this.route('find');
   this.route('report');
+    this.route('thanks');
   });

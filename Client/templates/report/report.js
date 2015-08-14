@@ -1,10 +1,6 @@
-Meteor.S
-
 Template.reportTemplate.helpers({
   exampleMapOptions: function() {
     var position = Geolocation.currentLocation();
-    console.log(position);
-	console.log(GoogleMaps.loaded());
     // Make sure the maps API has loaded
     if (GoogleMaps.loaded()) {
       // Map initialization options
@@ -40,14 +36,31 @@ Template.reportTemplate.onCreated(function() {
 		localStorage['lastLng'] = point.lng();
 	});
   });
-
 });
-Template.reportTemplate.events({
-	'click input': function (event){
-		var long =localStorage['lastLng'];
-		var lat = localStorage['lastLat'];
-		var notes = "no notes";
-			console.log('Save Binshi');
-			Binshis.insert({ created: Date.now(), long : long, lat: lat,notes : notes});
+
+// AutoForm.addHooks('deviceDetailsForm', {
+  // onSuccess: function (formType, result) {
+    // $('#deviceDetailsModal').modal('hide');
+  // },
+  // onError: function (formType, error) {
+    // var code = error.error;
+    // if (code) { // error from server
+      // console.error(error);
+    // }
+  // },
+// });
+
+Template._myModal.events({
+	'submit form': function (event,template){
+			event.preventDefault();
+			var long =localStorage['lastLng'];
+			var lat = localStorage['lastLat'];
+			var notes = event.target.description.value;
+			
+			//photo: $(e.target).find('[name=appPic]').val()
+			
+			Binshis.insert({ created: Date.now(), long : long, lat: lat, notes : notes, votes: '0' });
+			
+			Router.go('thanks');
 	}	
 });

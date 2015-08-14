@@ -24,6 +24,10 @@ body {
   }
 }
 
+h2 {
+	text-align :center;
+}
+
 .front_image {
 	margin-left:auto;
 	margin-right:auto;
@@ -45,7 +49,17 @@ body {
   height: auto;
 }
 
-
+.squareformat
+{
+	height:200px;
+	width:80%;
+	display:block;
+	background-color: #ADD4D3;
+	margin-left:auto;
+	margin-right: auto;
+	text-align: center;
+	
+}
 
 .fakeAdvert{
 	display:block;
