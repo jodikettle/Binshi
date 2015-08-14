@@ -1,8 +1,18 @@
 <template name="report">
   {{#contentFor "headerTitle"}}
-    <h1 class="title">BinShi</h1>
+    <h1 class="title">I found Binshi!</h1>
   {{/contentFor}}
   {{#ionContent class="padding"}}
-	<h1>Saving the binned sushi</h1>
+		{{ > reportTemplate}}
   {{/ionContent}}
+</template>
+
+<template name="reportTemplate">
+  <div class="map-container">
+    {{> googleMap name="exampleMap" options=exampleMapOptions}}
+	{{> googleMap name="reportMap" }}
+  </div>
+  <div class="padding">
+	<input class="button button-positive button-block" Type="button" Text="Save" Value="Save"/>
+  </div>
 </template>

@@ -2,14 +2,19 @@
   {{#contentFor "headerTitle"}}
     <h1 class="title">BinShi</h1>
   {{/contentFor}}
-  {{#ionContent class="padding"}}
+  {{#ionView}}
+    {{#ionContent}}
   
-	<img src="/map_marker.png" />
+	<img class="front_image" src="/sushibin.jpg" />
   
 	<div class="padding">
 		<a href='/report' class="button button-positive button-block">I found Binshi</a>
 		<a href='/find' class="button button-positive button-block">I want Binshi</a>
       </div>
-	  
+	  {{ > MyAds}}
   {{/ionContent}}
+{{/ionView}}
 </template>
+
+
+

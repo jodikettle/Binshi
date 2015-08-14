@@ -11,6 +11,20 @@ Meteor.startup(function () {
   }
 });
 
+Router.map( function () {
+  this.route('MyRoute', {
+    waitOn: function() {
+      return IRLibLoader.load("//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js");
+    }
+  });
+});
+
+Router.onBeforeAction(function() {
+  GoogleMaps.load();
+  this.next();
+  console.log('test');
+}, { only: ['report', 'find'] });
+
 Router.map(function() {
   this.route('index', {path: '/'});
   this.route('find');

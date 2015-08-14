@@ -1,8 +1,15 @@
-$positive: #DE4F4F;
+$positive: #ff7f50;
+$background :#E9E2DA;
+$outline : #FB8351;
+
 $loading-font-size: 22px;
 
 @import '.meteor/local/build/programs/server/assets/packages/meteoric_ionic-sass/ionic';
 @import '.meteor/local/build/programs/server/assets/packages/meteoric_ionicons-sass/ionicons';
+
+body {
+	background-color: $background;
+}
 
 .ionic-body.platform-android {
   font-family: "Roboto", sans-serif;
@@ -15,6 +22,12 @@ $loading-font-size: 22px;
   .tab-item {
     font-family: "Roboto", sans-serif;
   }
+}
+
+.front_image {
+	margin-left:auto;
+	margin-right:auto;
+	display:block;
 }
 
 .ion-slide {
@@ -32,6 +45,16 @@ $loading-font-size: 22px;
   height: auto;
 }
 
+
+
+.fakeAdvert{
+	display:block;
+	background-color: #ADD4D3;
+	padding: 40px;
+	text-align:center;
+	font-weight: bold;
+}
+
 .item-button-left, .item-button-right {
   button {
     top: 16px !important;
@@ -39,5 +62,5 @@ $loading-font-size: 22px;
 }
 
 .map-container {
-	border: 5px solid red;
+	border: 1px solid #fefefe;
 }
